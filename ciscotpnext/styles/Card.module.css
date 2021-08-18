@@ -1,0 +1,13 @@
+.card {
+    max-width: 189px;
+    max-height: 189px;
+    width: 189px;
+    height: 189px;
+    box-sizing: border-box;
+    box-shadow: 0 0 .70em 0 #292828;
+    font-weight: bold;
+    font-size: .9rem;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(174,238,190,0.2945553221288515) 0%, rgba(148,187,233,0.258140756302521) 100%);
+    position: relative;
+}

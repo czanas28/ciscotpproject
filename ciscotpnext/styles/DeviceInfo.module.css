@@ -1,0 +1,64 @@
+.cardTitle {
+    position: relative;
+    max-width: max-content;
+    color: rgba(12, 104, 128, 0.822);
+}
+
+.cardTitle::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #344556;
+}
+
+.p {
+    max-width: 100%;
+    color: rgba(12, 104, 128, 0.822);
+    font-size: .85rem;
+    margin: .7em 0;
+    padding: 0 2px;
+}
+
+.item:hover {
+    color: lawngreen;
+}
+
+.a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.a:visited {
+    color: inherit;
+}
+
+.connected {
+    height: 15px;
+    width: 15px;
+    background: #d61c41;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 1em;
+    top: 1em;
+}
+
+.connected .connectedtooltip {
+    visibility: hidden;
+    width: 120px;
+    background: #344556;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 100;
+  }
+  
+  .connected:hover .connectedtooltip {
+    visibility: visible;
+  }

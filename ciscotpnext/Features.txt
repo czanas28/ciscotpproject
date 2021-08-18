@@ -1,0 +1,27 @@
+Device Management
+    CUCM
+        SOAP - Query devices on CUCM (by TP device)
+        Manual Entry (Needs a Class Constructor)
+        Look into risport70 with ping library to grab hostname and update devices found through API
+    Webex
+        Figure it out
+    Zoom
+        Query API for Zoom phones (Check if possible)
+        Learn more about Zoom devies for manual entry
+
+Connection (Home) Page
+    List all devices monitored by system
+        List Name (Source from CUCM Desc and Zoom equivilant, or manual entry),
+        Connection Status,
+        Can Ping,
+        Device Type
+        Clicking on Name launches page specific to device -->
+
+Device Page
+    Lists Connection page info,
+    "console log" history to view calls and connections,
+    shows associated email accounts for automated PIN entry
+    Other Features
+        Quick audio change
+        Power options
+        Look into additional features

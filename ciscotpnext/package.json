@@ -1,0 +1,21 @@
+{
+  "name": "ciscotpnext",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^2.0.1",
+    "jsxapi": "^5.0.3",
+    "mongodb": "^3.6.10",
+    "next": "10.2.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}

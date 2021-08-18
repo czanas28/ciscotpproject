@@ -1,0 +1,19 @@
+@media screen and (max-width: 900px) {
+    .app {
+        grid-template-rows: repeat(auto-fit, 189px);
+        justify-content: center;
+    }
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.app {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, 189px);
+    margin: 15px 0;
+    padding: 0 5%;
+  }

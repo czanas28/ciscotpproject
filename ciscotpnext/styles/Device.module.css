@@ -1,0 +1,78 @@
+.asideContainer {
+    margin: auto;
+    max-width: 800px;
+    padding: 5px;
+}
+
+.aside {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 10px 10px 10px;
+    background: linear-gradient(90deg, rgba(174,238,190,0.2945553221288515) 0%, rgba(148,187,233,0.258140756302521) 30%);
+}
+
+.formLabel {
+    margin: 15px 10px;
+    text-shadow: 0 0 5px #a1b7ce;
+}
+
+.btnFormOptions {
+    border: none;
+    border-radius: 15px;
+    margin: 0 5px;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: Ubuntu;
+    box-shadow: 0 0 10px #719ECE;
+    cursor: pointer;
+}
+
+.deviceForm {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-weight: bold;
+    font-family: Ubuntu;
+}
+
+.input {
+    border: none;
+    border-radius: 15px;
+    margin: 2px;
+    padding-left: 6px;
+    box-shadow: 0 0 10px #719ECE;
+    font-family: Ubuntu;
+}
+
+.label {
+    margin: 5px;
+    text-shadow: 0 0 5px #a1b7ce;
+}
+
+.submitBtn {
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: Ubuntu;
+    box-shadow: 0 0 10px #719ECE;
+    cursor: pointer;
+    grid-column-start: 2;
+}
+
+.input[type="checkbox"] {
+    margin-top: 3px;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.input[type="file"] {
+    border: none;
+    border-radius: 15px;
+    margin: 2px;
+    padding: 3px 8px;
+    box-shadow: 0 0 10px #719ECE;
+    font-family: Ubuntu;
+}
