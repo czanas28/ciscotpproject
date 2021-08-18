@@ -14,7 +14,7 @@
     "http-proxy-middleware": "^2.0.1",
     "jsxapi": "^5.0.3",
     "mongodb": "^3.6.10",
-    "next": "10.2.3",
+    "next": "^11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   }
