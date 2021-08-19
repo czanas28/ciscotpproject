@@ -18,17 +18,18 @@ module.exports = {
         .on("error", (err) => console.log(err))
         .on("ready", async (xapi) => {
           const { panels, widgets } = require("../maps");
+          const host = device.hostname || device.ip
           console.log(`${device.hostname}${device.ip} has connected`);
           listenToCallConnect(xapi);
-          xapi.Event.UserInterface.Extensions.Panel.Clicked.PanelId.on((event) => {
+          await xapi.Event.UserInterface.Extensions.Panel.Clicked.PanelId.on((event) => {
             try {
-              panels.get(event).execute(xapi);
-            } catch (error) {}
+              panels.get(event).execute(xapi, host);
+            } catch (error) { console.error(error);}
           });
 
-          xapi.Event.UserInterface.Extensions.Widget.Action.on((event) => {
+          await xapi.Event.UserInterface.Extensions.Widget.Action.on((event) => {
             try {
-              widgets.get(event.WidgetId).execute(xapi)
+              widgets.get(event.WidgetId).execute(xapi, host, event.Type)
             } catch (error) {}
           })
         });

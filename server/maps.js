@@ -23,4 +23,4 @@ for (const file of widgetFiles) {
 }
 
 exports.panels = panels;
-exports.widgets =widgets;
+exports.widgets = widgets;
