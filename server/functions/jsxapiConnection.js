@@ -1,7 +1,9 @@
 const jsxapi = require("jsxapi");
 const { db } = require("./db");
-const { listenToCallConnect, listenToCallDisconnect } = require('./listenToCalls');
-
+const {
+  listenToCallConnect,
+  listenToCallDisconnect,
+} = require("./listenToCalls");
 
 module.exports = {
   async connect(deviceArray) {
@@ -15,10 +17,20 @@ module.exports = {
         })
         .on("error", (err) => console.log(err))
         .on("ready", async (xapi) => {
-          const { events } = require('../maps')
+          const { panels, widgets } = require("../maps");
           console.log(`${device.hostname}${device.ip} has connected`);
           listenToCallConnect(xapi);
-          events.get('widget').clicked(xapi);
+          xapi.Event.UserInterface.Extensions.Panel.Clicked.PanelId.on((event) => {
+            try {
+              panels.get(event).execute(xapi);
+            } catch (error) {}
+          });
+
+          xapi.Event.UserInterface.Extensions.Widget.Action.on((event) => {
+            try {
+              widgets.get(event.WidgetId).execute(xapi)
+            } catch (error) {}
+          })
         });
     });
   },
