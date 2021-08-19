@@ -14,6 +14,7 @@
     "jsonwebtoken": "^8.5.1",
     "jsxapi": "^5.1.0",
     "mongodb": "^4.0.0",
+    "nodemailer": "^6.6.3",
     "nodemon": "^2.0.12",
     "url-parse": "^1.5.3",
     "xml2js": "^0.4.23"
