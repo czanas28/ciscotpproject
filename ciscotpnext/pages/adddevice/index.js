@@ -10,6 +10,12 @@ export default function NewDevice(props) {
   const [submitting, setSubmitting] = useState();
   const [customUI, setCustomUI] = useState();
 
+  const [addCustomFields, setAddCustomFields] = useState([]);
+
+  useEffect(() => {
+    console.log(addCustomFields);
+  });
+
   const [formState, setFormState] = useState({
     hostname: "",
     ip: "",
@@ -85,6 +91,16 @@ export default function NewDevice(props) {
     });
   };
 
+  const handleCustomFeatures = (e) => {
+    console.log(e.target.name);
+
+    if (!addCustomFields.includes(e.target.name)) {
+      setAddCustomFields([...addCustomFields, e.target.name]);
+    } else {
+      let result = addCustomFields.filter((item) => item != e.target.name);
+      setAddCustomFields(result);
+    }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -233,7 +249,24 @@ export default function NewDevice(props) {
             value="submit"
             disabled={submitting ? false : true}
           />
+          <Input
+            type="checkbox"
+            label="Mute on Call Start"
+            name="muteOnCallStart"
+            onChange={handleCustomFeatures}
+            styleinput={styles.input}
+            stylelabel={styles.label}
+          />
+          <Input
+            type="checkbox"
+            label="Feature Two"
+            name="featureTwo"
+            onChange={handleCustomFeatures}
+            styleinput={styles.input}
+            stylelabel={styles.label}
+          />
         </form>
+        {addCustomFields}
       </div>
     </div>
   );
